@@ -43,7 +43,7 @@
             та легко. Приєднуйтесь до нашого курсу!
           </p>
 
-          <button class="btn" type="button">Хочу вчитись</button>
+          <button class="btn" type="button" id="openModal">Хочу вчитись</button>
 
           <img
             src="./img/blob-shape-desk@1x.png"
@@ -73,7 +73,7 @@
             <!-- cardone -->
 
             <li class="course-card">
-              <article class="course-art">
+              <a class="course-art" id="openModal" type="button">
                 <svg class="course-icon" width="104" height="88">
                   <use href="./img/icons.svg#icon-black-person-one"></use>
                 </svg>
@@ -83,7 +83,7 @@
                   вашому успіху.
                 </p>
                 <p class="classes-price">Ціна за 1 урок: від 350 гривень</p>
-              </article>
+              </a>
             </li>
 
             <!-- cardtwo -->
@@ -292,7 +292,7 @@
                 </li>
 
           </ul>
-          <button class="btn c-btn" type="button">Хочу вчитись</button>
+          <button class="btn c-btn" type="button" id="openModal">Хочу вчитись</button>
         </div>
       </section>
       <!-- line -->
@@ -312,7 +312,7 @@
               контактних даних нижче:
             </p>
             <div class="adr-wrap">
-            <button class="btn btn-cont" type="button">Хочу вчитись</button>
+            <button class="btn btn-cont" type="button" id="openModal" >Хочу вчитись</button>
             <ul class="cont-list">
               <li>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener"
@@ -397,8 +397,39 @@
     </footer>
 
     <!-- modal window -->
-
+    <div id="modal" class="modal isHiden">
+      <div class="modal-content">
+        <button class="close-btn" id="close" type="button">
+        <svg class="close" width="20" height="20">
+          <use href="./img/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+        <h2 class="modal-title" >Записатися на безкоштовний пробний урок!</h2>
+        <form id="myForm">
+          <p class="coment-par">Iм'я</p>
+          <input type="text" id="name" placeholder="Сергій(Альбіна)" required>
+          <p class="coment-par">Телефон</p>
+          <input type="tel" id="phone" placeholder="+ 380 999 999 999" required>
+          <p class="coment-par">Електронна пошта</p>
+          <input type="email" id="mail" placeholder="schoolOnline@mail.com">
+          <p class="coment-par">Ваш коментар</p>
+          <textarea id="comment" > </textarea>
+          <button type="submit">Хочу вчитись<svg class="" width="32" height="40">
+            <use href="./img/icons.svg#icon-telegramm-black"></use>
+          </svg></button>
+        </form>
+      </div>
+    </div>
     <!-- modal window two -->
+    <div id="thank-you-popup" class="isHiden">
+      <div class="thanks-win">
+        <h4>Дякуємо</h4>
+        <p> Ми отримали вашу заявку і зв'яжемося з вами</p>
+        <img src="./img/pngwing.png" alt="Salute" width="78">
+
+      </div>
+      </div>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
