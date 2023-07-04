@@ -1,0 +1,31 @@
+.foot-box{
+    padding-bottom: 40px ;
+    padding-top: 40px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-par{
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  
+  color: var(--black);
+  }
+  
+  @media (max-width:468px){
+    .foot-box{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    } 
+    .footer-par{
+       
+        font-size: 12px;
+        }
+  }

@@ -1,0 +1,117 @@
+.course-box{
+    padding-bottom: 106px;
+   }
+   .classes {
+   margin-bottom: 24px;
+   
+   text-align: center;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 48px;
+   line-height: 1.33;
+   
+   color: var(--black);
+   }
+   .par-classes {
+   margin-bottom: 48px;
+   margin-left: auto;
+   margin-right: auto;
+   
+   max-width: 895px;
+   
+   text-align: center;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 1.44;
+   
+   color: var(--black);
+   }
+   .classes-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 23px;
+   }
+   .course-card{
+    padding: 64px 24px 40px 24px;
+     flex: 1 1 calc((100% - 3 * 23px) / 3);
+   
+   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   
+   background-color: #fff;
+   
+   transition-property: box-shadow;
+   transition-duration: var(--time-trans);
+   transition-timing-function: var(--cub-bez);
+   }
+   .course-card:hover, .course-card:focus
+   {
+     box-shadow: 12px 12px 8px #71A894;
+   }
+   
+   .course-icon{
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 24px;
+   
+    display: block;
+   
+   }
+   
+   .classes-card-title {
+     margin-bottom: 16px;
+     text-align: center;
+     color: var(--black);
+   }
+   .classes-card-par {
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 52px;
+     text-align: center;
+   
+     display: block;
+     max-width: 379px;
+   
+     color: var(--black);
+   }
+   .classes-price {
+     text-align: center;
+     color: #2D8B00;
+   }
+   @media (max-width: 468px){
+    .classes{
+      font-size: 32px;
+    }
+    .course-card{
+      padding: 10px 10px 10px 10px;
+    }
+    .par-classes{
+      font-size: 16px;
+    }
+    .classes-card-title{
+       font-size: 16px;
+    }
+    .classes-card-par{
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+   }
+   @media (min-width: 469px) and (max-width:1200px){
+    .classes{
+      font-size: 24px;
+    }
+    .course-card{
+      padding: 10px 10px 10px 10px;
+    }
+    .par-classes{
+      font-size: 14px;
+    }
+    .classes-card-title{
+       font-size: 16px;
+    }
+    .classes-card-par{
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+   }

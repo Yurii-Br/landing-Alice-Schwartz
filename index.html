@@ -8,10 +8,112 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/course.css" />
+    <link rel="stylesheet" href="./css/reviews.css" />
+    <link rel="stylesheet" href="./css/advantages.css" />
+    <link rel="stylesheet" href="./css/courses.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/foot.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
+      <style>.head-box {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+      }
+      .logo-icon{
+        margin-right: 8px;
+      }
+      .menu-burger-icon{
+       stroke:var(--black);
+      }
+      .open-menu{
+        display: none;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      
+      
+      font-family: 'Raleway',sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+      
+      color:var(--black);
+      
+      }
+      
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+      .nav-link {
+      
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height:1.15;
+      letter-spacing: -0.02em;
+      
+      color: var(--black);
+      
+      transition-property: color;
+      transition-duration: var(--time-trans);
+      transition-timing-function: var(--cub-bez);
+      }
+      .nav-link:hover,.nav-link:focus{
+        color: var(--green);
+      }
+  @media (max-width: 468px) {
+     
+        .nav{
+          display: none;
+        }
+        .head-box{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .open-menu{
+          background: none;
+          border: none;
+          display: flex;
+          align-items: center;
+        }
+        .logo{
+          font-size: 16px;
+        }
+
+  }
+  @media (min-width: 469px) and (max-width:1200px) {
+    .head-box{
+         display: block;
+        }
+    .logo{
+      margin-bottom: 10px;
+     justify-content: center;
+          font-size: 24px;
+        }
+        .nav-link{
+          font: size 10px;
+        }
+        .nav-list{
+          justify-content: center;
+        }
+  }
+  @media (min-width:1200px) {
+    
+  }
+      </style>
       <div class="container head-box">
         <!-- logo -->
        
@@ -28,6 +130,10 @@
             <li><a href="#contacts" class="nav-link">Контакти</a></li>
           </ul>
         </nav>
+        <!-- menu-burger  -->
+        <button type="button" class="open-menu" ><svg class="menu-burger-icon" width="30" height="22">
+          <use href="./img/icons.svg#icon-menu-hamburger"></use>
+        </svg></button>
       </div>
     </header>
 
@@ -134,63 +240,24 @@
             нами. Ось деякі відгуки від наших студентів, які поділилися своїм
             досвідом з вивчення англійської мов.
           </p>
-          <ul class="reviews-list">
-            <!-- cardone -->
-            <li class="rev-card pos-two">
-              <div class="circle">
-              <img
-                src="./img/Dillon Kydd-desk@1x.png"
-                alt="photo-reviera"
-                width="120"
-                class="rev-card-img"
-              />
-            </div>
-              <div class="txt-box">
-              <h2 class="rev-card-title">Андрій</h2>
-              <h3 class="rev-card-years">25 років :</h3>
-              <p class="rev-card-par">
-                Мені пощастило познайомитися з Алісою та скористатися її курсом
-                з вивчення англійської мови. Вона не тільки добрий викладач, а й
-                відмінна людина. Вона завжди знаходить індивідуальний підхід до
-                кожного студента і надає неоціненну підтримку та мотивацію. За
-                допомогою її курсу, я почуваю себе впевненіше і здатним вести
-                розмову англійською мовою.
-              </p>
-            </div>
-            </li>
 
-            <!-- cardtwo -->
-
-            <li class="rev-card pos-one">
-              <div class="circle">
-              <img
-                src="./img/Coverdesk@1x.png"
-                alt="photo-reviera"
-                width="120"
-                class="rev-card-img"
-              />
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./img/Rectangle 6.jpg" alt="Image 1" width="300" >
+              <img src="./img/Rectangle 7.jpg" alt="Image 2" width="300">
+              <img src="./img/Rectangle 8.jpg" alt="Image 3" width="300">
+              <img src="./img/Rectangle 9.jpg" alt="Image 4" width="300">
+              <img src="./img/Rectangle 10.jpg" alt="Image 5" width="300">
             </div>
-              <div class="txt-box">
-              <h2 class="rev-card-title">Олена</h2>
-              <h3 class="rev-card-years">30 років :</h3>
-              <p class="rev-card-par">
-                Навчання з Алісою ,це просто неймовірно! Я ніколи не зустрічала
-                викладача, який би вкладав такий труд і зусилля, щоб допомогти
-                своїм студентам. Вона пояснює складні поняття простими словами і
-                завжди готова допомогти. Її підхід до навчання - це не просто
-                уроки, а цілеспрямована подорож до знань. Я вже бачу великі
-                покращення у своєму володінні англійською мовою і дуже щаслива,
-                що вибрала саме цей курс)
-              </p>
-            </div>
-            </li>
-          </ul>
-
+            <button class="carousel-prev"  >&larr;</button>
+            <button class="carousel-next">&rarr;</button>
+          </div>
+        
           <div class="rev-box-down">
           <svg class="reviews-icon-down" width="80" height="80">
             <use href="./img/icons.svg#icon-Icontwo"></use>
           </svg>
-          <h1 class="reviews-title">Мої учні говорять</h1>
+          <h1 class="reviews-title">Мої учні говорять:</h1>
           <p class="reviews-par">
             Не зупиняйся на шляху до свого успіху! Навчання англійської мови -
             це виклик, який варто прийняти з відкритим серцем і незламною волею.
@@ -351,7 +418,7 @@
     </main>
 
     <footer>
-      <div class="container head-box foot-box">
+      <div class="container foot-box">
         <!-- logo -->
        
         <a href="./index.html" class="logo"> <svg class="logo-icon"  width="40" height="40">
@@ -431,5 +498,6 @@
       </div>
     </div>
     <script src="./js/main.js"></script>
+    <script src="./js/carousel.js"></script>
   </body>
 </html>

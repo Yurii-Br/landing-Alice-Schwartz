@@ -1,0 +1,49 @@
+.head-box {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .logo-icon{
+    margin-right: 8px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  
+  
+  font-family: 'Raleway',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  
+  color:var(--black);
+  
+  }
+  
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav-link {
+  
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height:1.15;
+  letter-spacing: -0.02em;
+  
+  color: var(--black);
+  
+  transition-property: color;
+  transition-duration: var(--time-trans);
+  transition-timing-function: var(--cub-bez);
+  }
+  .nav-link:hover,.nav-link:focus{
+    color: var(--green);
+  }
