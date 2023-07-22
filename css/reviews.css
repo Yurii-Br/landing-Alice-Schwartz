@@ -75,12 +75,6 @@
     right: 10px;
     border-radius: 50%;
   }
-
-
- 
- 
- 
- 
   @media (max-width: 468px){
  
     .reviews-title{
@@ -98,3 +92,5 @@
   @media (min-width: 469px) and (max-width:1200px){
 
   }
+
+ 
