@@ -1,23 +1,22 @@
-const carouselContainer = document.querySelector('.carousel-container');
-const carouselPrevBtn = document.querySelector('.carousel-prev');
-const carouselNextBtn = document.querySelector('.carousel-next');
 
-let position = 0;
-const slideWidth = 300; // Здесь можно задать ширину слайда (в пикселях)
-carouselPrevBtn.style.display = "none";
+import { galleryItems } from './gallery-items.js';
 
-carouselPrevBtn.addEventListener('click', () => {
-  if (position < 0) {
-    position += slideWidth;
-    carouselContainer.style.transform = `translateX(${position}px)`;
-    
-  }
-});
+const galeryList = document.querySelector(".gallery");
 
-carouselNextBtn.addEventListener('click', () => {
-  if (position > -slideWidth * (carouselContainer.children.length - 1)) {
-    position -= slideWidth;
-    carouselContainer.style.transform = `translateX(${position}px)`;
-    carouselPrevBtn.style.display = "block";
-  }
-});
+const galeryElements = galleryItems.map((el) => 
+`<li class = "gallery__item"> 
+<a class="gallery__link" href="${el.original}"> 
+<img class = "gallery__image"  src="${el.preview}" alt="${el.description}"> 
+</a> 
+</li>`).join('');
+galeryList.insertAdjacentHTML("afterbegin",galeryElements);
+
+const gallery = new SimpleLightbox('.gallery a', {
+  
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      gallery.close();
+    }
+  });
