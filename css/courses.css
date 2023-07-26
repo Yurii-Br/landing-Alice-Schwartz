@@ -89,7 +89,7 @@
   text-align: center;
   letter-spacing: -0.02em;
   }
-  @media (max-width: 468px){
+  @media (max-width: 970px){
     .c-box{
       padding-bottom: 40px;
     }
@@ -99,7 +99,21 @@
     .c-par{
       font-size: 14px;
     }
+    .c-list {
+       display: block;
+    }
+    .c-card:not(:last-child) {
+      margin-bottom: 15px;
+   }
+   .c-card-partwo{
+    margin: auto auto;
+   }
   }
   @media (min-width: 469px) and (max-width:1200px){
-
+    .c-title{
+      font-size: 48px;
+    }
+    .c-par{
+      font-size: 24px;
+    }
   }

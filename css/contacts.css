@@ -50,7 +50,9 @@
   {
     fill: var(--green);
   }
-  @media (max-width: 468px){
+ 
+ 
+  @media (max-width: 1199px){
     .contact-box{
       padding-top: 59px;
      display: block;
@@ -69,6 +71,7 @@
       display: block;
     }
     .btn-cont{
+      display: block;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 10px;
@@ -79,3 +82,5 @@
       justify-content: center;
     }
   }
+
+  

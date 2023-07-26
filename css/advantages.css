@@ -71,7 +71,7 @@
   .adv-group-two{
     margin-left: 40px;
   }
-  @media (max-width: 468px){
+  @media (max-width: 700px){
     .advantages-title{
       font-size: 24px;
     }
@@ -91,11 +91,18 @@
     margin-left: auto;
     margin-right: auto;
    }
+   .two{
+    margin-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+   }
    .three{
     margin-top: 24px;
+    margin:auto  auto;
+
    }
    .advantages-list{
-    justify-content: center;
+    display: block;
    }
   }
   @media (min-width: 469px) and (max-width:1200px){

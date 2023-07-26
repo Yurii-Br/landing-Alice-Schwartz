@@ -78,6 +78,7 @@
    .classes-price {
      text-align: center;
      color: #2D8B00;
+     font-size: 24px;
    }
    @media (max-width: 468px){
     .classes{
@@ -96,6 +97,10 @@
       margin-bottom: 10px;
       font-size: 12px;
     }
+    .classes-price {
+      
+      font-size: 16px;
+    }
    }
    @media (min-width: 469px) and (max-width:1200px){
     .classes{
@@ -113,5 +118,9 @@
     .classes-card-par{
       margin-bottom: 10px;
       font-size: 12px;
+    }
+    .classes-price {
+      font-size: 18px;
+      
     }
    }

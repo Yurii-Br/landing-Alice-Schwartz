@@ -17,7 +17,7 @@
   color: var(--black);
   }
   
-  @media (max-width:468px){
+  @media (max-width:1199px){
     .foot-box{
       flex-direction: column;
       justify-content: center;
