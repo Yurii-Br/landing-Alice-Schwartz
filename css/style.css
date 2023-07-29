@@ -57,19 +57,56 @@ body{
 /* =========================================================================== */
 .modal {
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+  z-index: 1000;
+ left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
   width: 100%;
   height: 100%;
   overflow: auto;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
 
 }
 
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+     
+  }
+  to {
+    opacity: 1;
+    
+  }
+}
+
+
+@keyframes fadeOutModal {
+  from {
+    opacity: 1;
+     
+  }
+  to {
+    opacity: 0;
+     
+  }
+}
+
+
+.modal.open {
+ 
+  animation: fadeInModal 0.4s;
+}
+
+
+.modal.close {
+ 
+  animation: fadeOutModal 0.4s;
+}
+
 .modal-content {
   position: fixed;
-  top:30%;
+  top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
 
@@ -80,6 +117,16 @@ body{
   width: 80%;
   max-width: 600px;
 
+}
+@media  screen and (min-width:480px) {
+  .modal-content {
+    top:30%;
+  }
+}
+@media  screen and (min-width:480px) and (max-width:768px) {
+  .modal-content {
+    top:40%;
+  }
 }
 
 .close {
@@ -192,6 +239,9 @@ form button svg {
   width: 100%;
   height: 100%;
  background-color: rgba(0, 0, 0, 0.5);
+ transition-property: transform;
+ transition-duration: var(--time-trans);
+ transition-timing-function: var(--cub-bez);
 }
 .thanks-win{
  padding: 18px 42px;
@@ -242,4 +292,58 @@ color: var(--black);
   clip: rect(0 0 0 0);
   overflow: hidden;
   
+  transition-property: transform;
+  transition-duration: var(--time-trans);
+  transition-timing-function: var(--cub-bez);
+}
+/* =========================================== */
+/* menu-burger */
+
+@media screen and (max-width:479px) {
+  .menu-burger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color:#def2eb;
+    transform: scaleX(0);
+    transform-origin: 100%;
+
+    transition:transform var(--time-trans ) var(--cub-bez);
+  }
+
+.menu-burger.menuIsOpen{
+  transform: scaleX(1);
+}
+
+  .list-navigation{
+    padding-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .burger-close{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+    background: none;
+  
+    transition: fill var(--time-trans)  var(--cub-bez);
+  }
+  .burger-close:hover{
+   fill: var(--green);
+  }
+}
+@media screen and (min-width:480px){
+  .menu-burger{
+    display: none;
+  }
 }
