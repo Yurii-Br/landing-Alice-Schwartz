@@ -499,13 +499,13 @@
         <h2 class="modal-title" >Записатися на безкоштовний пробний урок!</h2>
         <form id="myForm" action="https://formspree.io/f/moqojvbj" method="POST">
           <p class="coment-par">Iм'я</p>
-          <input type="text" id="name" placeholder="Сергій(Альбіна)" required>
+          <input type="text" name="name" id="name" placeholder="Сергій(Альбіна)" required>
           <p class="coment-par">Телефон</p>
-          <input type="tel" id="phone" placeholder="+ 380 999 999 999" required>
+          <input type="tel" name="phone" id="phone" placeholder="+ 380 999 999 999" required>
           <p class="coment-par">Електронна пошта</p>
-          <input type="email" id="mail" placeholder="schoolOnline@mail.com">
+          <input type="email" name="email" id="mail" placeholder="schoolOnline@mail.com">
           <p class="coment-par">Ваш коментар</p>
-          <textarea id="comment" > </textarea>
+          <textarea id="comment" name="comment" > </textarea>
           <button type="submit" id="sub">Хочу вчитись<svg class="" width="32" height="40">
             <use href="./img/icons.svg#icon-telegramm-black"></use>
           </svg></button>
